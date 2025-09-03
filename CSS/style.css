@@ -1,10 +1,20 @@
-h1{
+/* div p{
     background-color: red;
-    color:white;
+    color: white;
 }
-h2{
-    color: blueviolet;
+p:hover{
+    font-size: 20px;
+    color: yellow;
 }
-#home{
-    background-color: aqua;
+p::after{
+    content: "Abes Engineering colle";
+    background-color: black;
+    color: white;
 }
+p:nth-child(1){
+    font-style: italic;
+} */
+ div p:nth-of-type(1){
+    background-color: blue;
+    color: white;
+ }
