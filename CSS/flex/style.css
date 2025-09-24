@@ -1,0 +1,18 @@
+.parent{
+    display:flex;
+    background-color: black;
+    justify-content: space-evenly;
+   flex-wrap: wrap;
+
+}
+.child{
+    height:200px;
+    width:200px;
+    background-color: white;
+    margin:5px;
+   
+}
+
+.child1{
+    order: 2;
+}
