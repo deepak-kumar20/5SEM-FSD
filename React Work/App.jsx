@@ -16,7 +16,9 @@
 const Head = <h1>This is using Jsx</h1>
 const li1 = <li id="li1">JavaScript</li>
 const li2 = <li id="li2">python</li>
+
 const ul = <ul>
+   
     {li1}
     {li2}
 </ul>
