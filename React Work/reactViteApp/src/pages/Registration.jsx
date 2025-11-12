@@ -1,6 +1,20 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-const Registration = () => {
+const Registration = ({regData}) => {
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+
+    const getData = (e) => {
+        e.preventDefault();
+        const data = {
+            name,
+            email,
+            password
+        }
+        regData(data);
+    }
+    
     return (
       <>
         <div>Registration</div>
@@ -9,7 +23,8 @@ const Registration = () => {
             <label for="exampleInputName1" class="form-label">
               Name
             </label>
-            <input
+                    <input
+                        onChange={(e)=>setName(e.target.value)}
               type="text"
               class="form-control"
               id="exampleInputName1"
@@ -18,7 +33,8 @@ const Registration = () => {
             <label for="exampleInputEmail1" class="form-label">
               Email address
             </label>
-            <input
+                    <input
+                    onChange={(e)=>setEmail(e.target.value)}
               type="email"
               class="form-control"
               id="exampleInputEmail1"
@@ -32,7 +48,8 @@ const Registration = () => {
             <label for="exampleInputPassword1" class="form-label">
               Password
             </label>
-            <input
+                    <input
+                        onChange={(e)=>setPassword(e.target.value)}
               type="password"
               class="form-control"
               id="exampleInputPassword1"
@@ -48,7 +65,7 @@ const Registration = () => {
               Check me out
             </label>
           </div>
-          <button type="submit" class="btn btn-primary">
+          <button onClick={getData} type="button" class="btn btn-primary">
             Submit
           </button>
         </form>

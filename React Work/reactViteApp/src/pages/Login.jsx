@@ -1,6 +1,16 @@
 import React from 'react'
 
-const Login = () => {
+const Login = ({logData}) => {
+  const [email, setEmail] = React.useState('');
+  const [password, setPassword] = React.useState('');
+  const verification = (e) => {
+    e.preventDefault();
+    if (logData?.email === email && logData?.password === password) {
+      alert("login successffully")
+    } else {
+      alert("invalid credentials")
+    }
+   }
     return (
       <>
         <div>Login</div>
@@ -10,6 +20,7 @@ const Login = () => {
               Email address
             </label>
             <input
+              onChange={(e)=>setEmail(e.target.value)}
               type="email"
               class="form-control"
               id="exampleInputEmail1"
@@ -24,6 +35,7 @@ const Login = () => {
               Password
             </label>
             <input
+              onChange={(e)=>setPassword(e.target.value)}
               type="password"
               class="form-control"
               id="exampleInputPassword1"
@@ -39,7 +51,7 @@ const Login = () => {
               Check me out
             </label>
           </div>
-          <button type="submit" class="btn btn-primary">
+          <button onClick={verification} type="button" class="btn btn-primary">
             Submit
           </button>
         </form>

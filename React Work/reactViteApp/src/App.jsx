@@ -9,7 +9,10 @@ import Dashboard from "./pages/Dashboard";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Registration from "./pages/Registration";
 import MainLayout from "./pages/MainLayout";
+import { useState } from "react";
 function App() {
+  const [data, setData] = useState();
+  
   return (
     <>
       {/* <h1 className="head">Welcome to React</h1> */}
@@ -23,13 +26,15 @@ function App() {
           {/* <Route path="/" element={<Gallery />} />
           <Route path="/state" element={<StateHandling />} />
           <Route path="/image" element={<ImageManipulation />} /> */}
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Registration />} />
+          <Route path="/login" element={<Login logData={data} />} />
+          <Route
+            path="/register"
+            element={<Registration regData={setData} />}
+          />
           <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/" element={<MainLayout/>}/>
+          <Route path="/" element={<MainLayout />} />
         </Routes>
       </BrowserRouter>
-
     </>
   );
 }
