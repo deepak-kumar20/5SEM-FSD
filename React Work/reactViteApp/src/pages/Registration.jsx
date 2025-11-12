@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
-
+import { useNavigate } from 'react-router-dom';
 const Registration = ({regData}) => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-
+    const navigate = useNavigate();
     const getData = (e) => {
         e.preventDefault();
         const data = {
@@ -13,6 +13,7 @@ const Registration = ({regData}) => {
             password
         }
         regData(data);
+        navigate('/login');
     }
     
     return (

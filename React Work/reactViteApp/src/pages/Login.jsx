@@ -1,12 +1,15 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
 
 const Login = ({logData}) => {
   const [email, setEmail] = React.useState('');
-  const [password, setPassword] = React.useState('');
+  const [password, setPassword] = React.useState('')
+  const navigate = useNavigate();
   const verification = (e) => {
     e.preventDefault();
     if (logData?.email === email && logData?.password === password) {
       alert("login successffully")
+      navigate('/dashboard');
     } else {
       alert("invalid credentials")
     }
