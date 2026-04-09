@@ -1,51 +1,98 @@
-// console.log("Hello world");
-// let a = "20";
-// if (a == 20) {
-//     console.log("a is 20");
+// console.log("Hello World");
+// var a;
+// console.log("a="+a);
+// var a=23;
+
+// let a=40;
+// if(a>10){
+// let a=300;
+// console.log("a inside:"+a)
+// }else{
+// console.log("else condtition")
 // }
-// const data = function(name) {
-//     return `Hello ${name}`;
-    
+// console.log("a outside="+a);
+
+
+// let a="20";
+// if(a===20){
+//     console.log("Equal data")
 // }
-// console.log(data("John"));
-// const a = () => {
-//     console.log("Arrow function");
+// else{
+//     console.log("not equal");
 // }
-// a();
-// iife
-// (() => {
-//     console.log("IIFE");
+
+// const myname="Rahul";
+// //console.log("Hiiii....."+myname);
+// const data=`Hello...${myname}`;
+// console.log(data);
+
+//function as an expression
+// const data=function msg(name){
+//     return name+" welcome to JS";
+// }
+//   const msg=data("Rahul");
+//   console.log(msg);
+// const data=msg("Ram");
+// console.log(data);
+
+
+//Arrow function
+
+// const data=(myname)=>{
+//     //console.log("Hiiii....Hellloo"+myname)
+//     return "Hiiii....Hellloo"+myname;
+// }
+// const result=data("Ram");
+// console.log(result)
+
+//single line
+// const data=msg=>"Hiii..."+msg;
+// console.log(data("Greetings...."));
+
+//IIFE
+
+// (function(){
+//     console.log("Welcome to JS")
 // })();
 
-// setTimeout(() => {
-//     console.log("Hello after 2 second")
-// }, 2000)
-// setInterval(() => {
-//     console.log("Hello after 1 seconds");
-// }, 1000);
+// (()=>{
+//     console.log("Welcome to ABES")
+// })();
 
-function greet(name = "guest") {
-    return `hello ${name}`
-}
-console.log(greet("node"));
-function selectlanguage(lang) {
-    let data;
-    if (lang == 'java') {
-        function javaCompiler(param) {
-            return "java compiler";
+// setTimeout(()=>{
+// console.log("Hiii... I m using Timeout")
+// },1000);
 
-        }
-        data= javaCompiler();
-    } else if (lang == "C") {
-        function cCompiler() {
-            return "C compiler"
-        }
-        data = cCompiler();
-    } else {
-        data="no compiler found"
-    }
-    return data;
-}
-console.log(selectlanguage())
+// setInterval(()=>{
+// console.log("hiiii....how  r u")
+// },1000)
 
 
+// function greetings(msg="Welcome"){
+// console.log("Hiii"+msg);
+
+// }
+// greetings("rahul");
+
+
+//   function selectlanguage(lang){
+//     let data;
+//     if(lang=='java'){
+//         function javaCompiler(){
+//             return "Java comiler selected";
+//         }
+//         data=javaCompiler();
+//     }else if(lang=='c'){
+//         function cCompiler(){
+//             return "C compiler selected"
+//         }
+//         data=cCompiler();
+//     }
+//      else{
+//         data="no such compiler available"
+//      }
+//      return data;
+//   }
+// selectlanguage('java');
+
+  
